@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+        <h1>🧸 Jogo da Forca</h1>
+        <div id="forca-container">
+            <p>Palavra: <span id="palavra"></span></p>
+            <p id="dica">Dica: <span></span></p>
+            <p>Erros: <span id="erros">0</span></p>
+            <p>Tentativas restantes: <span id="tentativas">6</span></p>
+            <div id="forca"></div> <!-- Desenho da forca -->
+            <div id="teclado">
+                <!-- Teclado virtual vai aqui -->
+            </div>
+            <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
+        </div>
+        <div id="mensagemFinal" class="mensagemFinal"></div>
+        <img src="img/gatofofo1.png" class="fofa-img" alt="Gatinho Fofo"/>
+        <img src="img/estrelafofa1.png" class="estrela-img" alt="Estrela Fofa"/>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

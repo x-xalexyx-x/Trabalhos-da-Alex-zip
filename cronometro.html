@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel de Tempo Fofo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>⏰ Painel de Tempo Kawaii 🌟</h1>
+
+  <div class="tabs">
+    <button onclick="showTab('clock')">🕒 Relógio Mundial</button>
+    <button onclick="showTab('stopwatch')">⏱️ Cronômetro</button>
+    <button onclick="showTab('timer')">⏲️ Temporizador</button>
+    <button onclick="showTab('alarm')">⏰ Alarme</button>
+  </div>
+
+  <div class="content">
+
+    <div id="clock" class="tab active">
+      <h2>🌍 Relógio Mundial</h2>
+      <div class="world-clock" id="worldClock"></div>
+    </div>
+
+    <div id="stopwatch" class="tab">
+      <h2>🏃‍♀️ Cronômetro</h2>
+      <div class="timer" id="swDisplay">00:00:00.000</div>
+      <div class="buttons">
+        <button onclick="startStopwatch()">Iniciar</button>
+        <button onclick="pauseStopwatch()">Pausar</button>
+        <button onclick="resetStopwatch()">Resetar</button>
+        <button onclick="lapStopwatch()">Volta</button>
+      </div>
+      <div class="laps" id="swLaps"></div>
+    </div>
+
+    <div id="timer" class="tab">
+      <h2>🎀 Temporizador</h2>
+      <input type="number" id="timerMinutes" placeholder="Minutos" min="0" />
+      <input type="number" id="timerSeconds" placeholder="Segundos" min="0" />
+      <div class="buttons">
+        <button onclick="startTimer()">Iniciar</button>
+        <button onclick="resetTimer()">Resetar</button>
+      </div>
+      <div class="timer" id="timerDisplay">00:00</div>
+    </div>
+
+    <div id="alarm" class="tab">
+      <h2>⏰ Alarme</h2>
+      <input type="time" id="alarmTime" />
+      <div class="buttons">
+        <button onclick="setAlarm()">Definir Alarme</button>
+        <button onclick="clearAlarm()">Cancelar Alarme</button>
+      </div>
+      <div id="alarmStatus">Nenhum alarme definido.</div>
+    </div>
+
+  </div>
+
+  <audio id="beep" src="beep.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Idade de Cachorro</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Idade de Cachorro</h1>
+
+        <div class="form">
+            <label for="idade">Digite a idade:</label>
+            <input type="number" id="idade" placeholder="Digite a idade" required>
+            <select id="tipoConversao">
+                <option value="humano-para-cachorro">De Humano para Cachorro</option>
+                <option value="cachorro-para-humano">De Cachorro para Humano</option>
+            </select>
+            <button onclick="calcularIdade()">Calcular</button>
+        </div>
+
+        <div class="resultado">
+            <h2>Resultado:</h2>
+            <p id="resultadoTexto"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
